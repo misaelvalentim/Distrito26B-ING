@@ -1,18 +1,27 @@
+//Arrow fixed
 .up-arrow {
     width: 48px;
     height: 48px;
     position: fixed;
     bottom: 2em;
     right: 2em;
-    fill: blue;
+    fill: #1B2CC1;
     cursor: pointer;
     border-radius: 50%;
 }
-
+//menu setup
 .header {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     background: $dark;
+    .header-img { 
+        max-width: 100%;
+        height: 400px;
+        align-self: center;
+        flex-grow: 1;
+    }
     &--nav {
         box-sizing: border-box;
         display: flex;
@@ -21,6 +30,7 @@
         background: $lightblue;
         padding: 1em;
         height: 70/10 + em;
+        z-index: 1;
     }
     &--logo {
         width: 48px;
@@ -36,6 +46,7 @@
         background: $lightblue;
         z-index: 1000;
         transition: .5s;
+        visibility: hidden;
         overflow-y: hidden;
         @include tablet {
             display: flex;
@@ -43,12 +54,14 @@
             position: initial;
             z-index: 0;
             height: initial;
+            visibility: visible;
         }
         li {
             list-style: none;
-
+            
             a {
                 @extend .text--body;
+                color: #1B2CC1;
                 text-decoration: none;
                 display: block;
                 padding: 1em 0;
@@ -64,18 +77,84 @@
         }
     }
 }
+.imgbackground::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 0px;
+    top: 45%;
+    left: 40%;
+    text-align: center;
+    font-size: 3.8em;
+    font-weight: 700;
+    color: #FFF;
+    z-index: 2;
+}
+.imgbackground:hover::before {
+    content: "Distrito 26A-ING";
+    height: 46px;
+}
+.imgbackground::after {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+}
+.imgbackground:hover::after {
+    background: #333a;
+}
+//button setup
 .header--btn {
-    display: block;
-    background: transparent;
-    width: 80px;
-    padding: 0.5em;
+    display: flex;
+    font-size: 1.8em;
+    padding: .5em 1em;
+    border: none;
+    background: none;
+    color: #1B2CC1;
+    cursor: pointer;
+    position: relative;
+    &__hamburger {
+        margin-left: 5px;
+        width: 20px;
+        border-top: 2px solid;
+        color: #1B2CC1;
+    
+    }
+    &__hamburger::after, &__hamburger::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: currentColor;
+        position: relative;
+        transition: .8s;
+    }
     @include tablet {
         display: none;
     }
-    @include desktop {
-        display: none;
-    }
+}
+
+//hamburger setup
+.header--nav.active .header--btn__hamburger {
+    border: transparent;
+    position: relative;
+}
+.header--nav.active .header--btn__hamburger::before {
+    transform: rotate(135deg);
+    top: 3px;
+}
+.header--nav.active .header--btn__hamburger::after{
+    transform: rotate(-135deg);
+    top: -3px;
 }
 .header--nav.active .header--menu {
     height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+    @include tablet {
+        visibility: hidden;
+    }
 }
