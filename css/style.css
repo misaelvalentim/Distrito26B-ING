@@ -13,19 +13,19 @@ img {
   max-width: 100%;
 }
 
-.text--h1 {
+.text--h1, .section--1 .title {
   font-size: 3.8em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
 @media only screen and (min-width: 900px) {
-  .text--h1 {
+  .text--h1, .section--1 .title {
     font-weight: 700;
   }
 }
 
-.text--h2 {
+.text--h2, .section--1 .card-section .cards h2 {
   font-size: 3.2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -41,20 +41,20 @@ img {
   font-family: 'Montserrat', sans-serif;
 }
 
-.text--body, .header--menu li a {
+.text--body, .header--menu li a, .section--1 .card-section .cards p {
   font-size: 1.4em;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 
 @media only screen and (min-width: 600px) {
-  .text--body, .header--menu li a {
+  .text--body, .header--menu li a, .section--1 .card-section .cards p {
     font-size: 1.8em;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .text--body, .header--menu li a {
+  .text--body, .header--menu li a, .section--1 .card-section .cards p {
     font-size: 1.8em;
   }
 }
@@ -272,6 +272,41 @@ img {
 }
 
 .section--1 {
-  width: 100%;
-  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 50px;
+}
+
+.section--1 .title {
+  text-align: center;
+}
+
+.section--1 .card-section {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 600px) {
+  .section--1 .card-section {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.section--1 .card-section .cards img {
+  max-width: 90%;
+  max-height: 300px;
+}
+
+.section--1 .card-section .cards p {
+  display: gap;
+  padding: 2em;
+}
+
+.section--1 .card-section .cards h2 {
+  margin: 1em auto .5em auto;
 }

@@ -1,0 +1,33 @@
+.section--1 {
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 50px;
+    .title {
+        @extend .text--h1;
+        text-align: center;
+    }
+    .card-section{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include tablet {
+            grid-template-columns: repeat(4, 1fr);
+    
+        }
+        .cards {
+            img {
+                max-width: 90%;
+                max-height: 300px;
+            }
+            p {
+                @extend .text--body;
+                display: gap;
+                padding: 2em;
+            }
+            h2 {
+                @extend .text--h2;
+                margin: 1em auto .5em auto;
+            }
+        }
+    }
+}
