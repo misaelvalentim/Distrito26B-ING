@@ -130,13 +130,6 @@ img {
           box-shadow: 5px 5px 5px 5px #1b2cc159;
 }
 
-@media only screen and (min-width: 600px) {
-  .header--nav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
 .header--logo-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,69 +205,159 @@ img {
 @media only screen and (min-width: 900px) {
   .header--menu li a {
     border: none;
+    font-size: 2.2em;
   }
+}
+
+.header--menu li:nth-child(1)::before {
+  display: none;
 }
 
 @media only screen and (min-width: 600px) {
   .header--menu li:nth-child(1)::before {
+    display: initial;
     content: "";
     position: absolute;
     height: 0;
     width: 0;
+    background: #1B2CC1;
     top: 3em;
     left: 1.1em;
     -webkit-transition: .5s;
     transition: .5s;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(1)::before {
+    top: 3.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(1):hover::before {
     height: 3px;
     width: 5.5em;
-    background: #1B2CC1;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(1):hover::before {
+    width: 7.5em;
+  }
+}
+
+.header--menu li:nth-child(2)::before {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(2)::before {
+    display: initial;
     content: "";
     position: absolute;
     height: 0;
     width: 0;
     top: 3em;
     left: 1.1em;
+    background: #1B2CC1;
     -webkit-transition: .5s;
     transition: .5s;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(2)::before {
+    top: 3.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(2):hover::before {
+    height: 3px;
     width: 9.2em;
-    height: 3px;
-    background: #1B2CC1;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(2):hover::before {
+    width: 12em;
+  }
+}
+
+.header--menu li:nth-child(3)::before {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(3)::before {
+    display: initial;
     content: "";
     position: absolute;
     height: 0;
     width: 0;
     top: 3em;
     left: 1.1em;
+    background: #1B2CC1;
     -webkit-transition: .5s;
     transition: .5s;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(3)::before {
+    top: 3.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(3):hover::before {
-    width: 8.2em;
     height: 3px;
-    background: #1B2CC1;
+    width: 9.5em;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(3):hover::before {
+    width: 13.2em;
+  }
+}
+
+.header--menu li:nth-child(4)::before {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(4)::before {
+    display: initial;
     content: "";
     position: absolute;
     height: 0;
     width: 0;
     top: 3em;
     left: 1.1em;
+    background: #1B2CC1;
     -webkit-transition: .5s;
     transition: .5s;
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(4)::before {
+    top: 3.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .header--menu li:nth-child(4):hover::before {
-    width: 9.7em;
     height: 3px;
-    background: #1B2CC1;
+    width: 8em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .header--menu li:nth-child(4):hover::before {
+    width: 11em;
   }
 }
 
@@ -414,27 +497,21 @@ img {
   }
 }
 
-.cards {
-  position: relative;
-}
-
 .cards img {
   max-width: 90%;
   margin: 0 auto;
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 1;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 @media only screen and (min-width: 600px) {
   .cards img {
-    max-height: 400px;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .cards img {
-    max-width: 400px;
+    height: 400px;
+    min-height: 200px;
   }
 }
 
@@ -443,6 +520,9 @@ img {
   width: -moz-fit-content;
   width: fit-content;
   height: 400px;
+  opacity: .5;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
 }
 
 @media only screen and (min-width: 900px) {

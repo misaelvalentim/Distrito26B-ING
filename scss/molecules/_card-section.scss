@@ -24,23 +24,23 @@
 }
 
 .cards {
-    position: relative;
-
     img {
         max-width: 90%;
         margin: 0 auto;
         position: relative;
         object-fit: cover;
+        opacity: 1;
+        transition: opacity 2s;
         @include tablet {
-            max-height: 400px;
-        }
-        @include desktop {
-            max-width: 400px;
+            height: 400px;
+            min-height: 200px;
         }
     }
     .talent {
         width: fit-content;
         height: 400px;
+        opacity: .5;
+        transition: opacity 3s;
         @include desktop {
             width: 300px;
         }
