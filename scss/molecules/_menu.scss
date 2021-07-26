@@ -1,13 +1,16 @@
 //Arrow fixed
 .up-arrow {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
     position: fixed;
-    bottom: 2em;
-    right: 2em;
+    bottom: 1em;
+    right: 1em;
     fill: #1B2CC1;
     cursor: pointer;
     border-radius: 50%;
+    @include tablet{
+
+    }
 }
 //menu setup
 .header {
@@ -18,7 +21,7 @@
     background: $dark;
     .header-img { 
         max-width: 100%;
-        height: 400px;
+        min-height: 10%;
         align-self: center;
         flex-grow: 1;
     }
@@ -27,7 +30,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: $lightblue;
+        background: $gray;
         padding: 1em;
         height: 70/10 + em;
         z-index: 1;
@@ -39,11 +42,11 @@
     &--menu {
         display: block;
         position: absolute;
+        background: $gray;
         width: 100%;
         top: 70px;
         right: 0px;
         height: 0px;
-        background: $lightblue;
         z-index: 1000;
         transition: .5s;
         visibility: hidden;
@@ -88,7 +91,7 @@
     font-size: 3.8em;
     font-weight: 700;
     color: #FFF;
-    z-index: 2;
+    z-index: 1;
 }
 .imgbackground:hover::before {
     content: "Distrito 26A-ING";
@@ -100,7 +103,6 @@
     height: 100vh;
     width: 100%;
     bottom: 0;
-    z-index: 0;
 }
 .imgbackground:hover::after {
     background: #333a;

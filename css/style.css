@@ -25,13 +25,13 @@ img {
   }
 }
 
-.text--h2, .section--1 .card-section .cards h2 {
+.text--h2 {
   font-size: 3.2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
-.text--h3 {
+.text--h3, .cards h3 {
   font-size: 2.6em;
   font-family: 'Montserrat', sans-serif;
 }
@@ -41,30 +41,30 @@ img {
   font-family: 'Montserrat', sans-serif;
 }
 
-.text--body, .header--menu li a, .section--1 .card-section .cards p {
+.text--body, .header--menu li a, .cards address, .cards p {
   font-size: 1.4em;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 
 @media only screen and (min-width: 600px) {
-  .text--body, .header--menu li a, .section--1 .card-section .cards p {
+  .text--body, .header--menu li a, .cards address, .cards p {
     font-size: 1.8em;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .text--body, .header--menu li a, .section--1 .card-section .cards p {
+  .text--body, .header--menu li a, .cards address, .cards p {
     font-size: 1.8em;
   }
 }
 
 .up-arrow {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
   position: fixed;
-  bottom: 2em;
-  right: 2em;
+  bottom: 1em;
+  right: 1em;
   fill: #1B2CC1;
   cursor: pointer;
   border-radius: 50%;
@@ -85,7 +85,7 @@ img {
 
 .header .header-img {
   max-width: 100%;
-  height: 400px;
+  min-height: 10%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -106,7 +106,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #a9bcd0;
+  background: #d8dbe2;
   padding: 1em;
   height: 7em;
   z-index: 1;
@@ -120,11 +120,11 @@ img {
 .header--menu {
   display: block;
   position: absolute;
+  background: #d8dbe2;
   width: 100%;
   top: 70px;
   right: 0px;
   height: 0px;
-  background: #a9bcd0;
   z-index: 1000;
   -webkit-transition: .5s;
   transition: .5s;
@@ -183,7 +183,7 @@ img {
   font-size: 3.8em;
   font-weight: 700;
   color: #FFF;
-  z-index: 2;
+  z-index: 1;
 }
 
 .imgbackground:hover::before {
@@ -197,7 +197,6 @@ img {
   height: 100vh;
   width: 100%;
   bottom: 0;
-  z-index: 0;
 }
 
 .imgbackground:hover::after {
@@ -275,11 +274,14 @@ img {
   display: -ms-grid;
   display: grid;
   grid-auto-rows: auto;
-  row-gap: 50px;
+  gap: 30px;
+  background: #FFFFFF;
 }
 
 .section--1 .title {
+  color: #1B2CC1;
   text-align: center;
+  margin-top: 50px;
 }
 
 .section--1 .card-section {
@@ -292,21 +294,102 @@ img {
 
 @media only screen and (min-width: 600px) {
   .section--1 .card-section {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-auto-columns: auto;
   }
 }
 
-.section--1 .card-section .cards img {
+@media only screen and (min-width: 900px) {
+  .section--1 .card-section {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards {
+  position: relative;
+}
+
+.cards img {
   max-width: 90%;
-  max-height: 300px;
+  margin: 0 auto;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.section--1 .card-section .cards p {
+@media only screen and (min-width: 600px) {
+  .cards img {
+    max-height: 400px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .cards img {
+    max-width: 400px;
+  }
+}
+
+.cards .talent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 400px;
+}
+
+@media only screen and (min-width: 900px) {
+  .cards .talent {
+    width: 300px;
+  }
+}
+
+.cards address {
+  padding: 1em 0;
+}
+
+.cards p {
   display: gap;
-  padding: 2em;
+  padding: 2em 0;
 }
 
-.section--1 .card-section .cards h2 {
-  margin: 1em auto .5em auto;
+.cards h3 {
+  max-width: 400px;
+  margin: .5em auto;
+  color: #727d96;
+}
+
+.card2 .smoyer::after {
+  content: "dasdasdsa";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.445);
+  height: 100%;
+  width: 60%;
+  left: 0;
+  top: 0;
+}
+
+.section--1.section--1__animation img {
+  -webkit-animation-name: images;
+          animation-name: images;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes images {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes images {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 0%;
+  }
 }
