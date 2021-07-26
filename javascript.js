@@ -18,72 +18,71 @@ function toggleMenu() {
     HeaderNav.classList.toggle('active');
 
 }
-
 btnMenu.addEventListener('click', toggleMenu);
 
 
 //Talents for all missionaries
 
 
-const images = document.querySelectorAll('img');
-console.log(images)
+const images = document.querySelectorAll('.cards img');
 
-images.forEach(function(element) {
-
-element.addEventListener('click', function() {
-    const toggle = element.classList.toggle('talent');
-    if(element === images[1]) {
-        images[1].setAttribute('src', '/img/violin.jpg');
+function cardImages() {
+    const toggle = this.classList.toggle('talent');
+    if(this === images[0]) {
+        images[0].setAttribute('src', '/img/violin.jpg');
         if (!toggle) {
-            images[1].setAttribute('src', '/img/SisterThomson.jpeg');
+            images[0].setAttribute('src', '/img/SisterThomson.jpeg');
         }
-    } else if(element === images[2]) {
-        images[2].setAttribute('src', '/img/photography.jpg');
+    } else if(this === images[1]) {
+        images[1].setAttribute('src', '/img/photography.jpg');
         if (!toggle) {
-            images[2].setAttribute('src', '/img/SisterSmoyer.jpeg');
+            images[1].setAttribute('src', '/img/SisterSmoyer.jpeg');
         }
-    } else if(element === images[3]) {
-        images[3].setAttribute('src', '/img/basketball.jpg');
+    } else if(this === images[2]) {
+        images[2].setAttribute('src', '/img/basketball.jpg');
         if (!toggle) {
-            images[3].setAttribute('src', '/img/ElderTorkornoo.jpeg');
+            images[2].setAttribute('src', '/img/ElderTorkornoo.jpeg');
         }
-    } else if(element === images[4]) {
-        images[4].setAttribute('src', '/img/banjo.jpg');
+    } else if(this === images[3]) {
+        images[3].setAttribute('src', '/img/banjo.jpg');
         if (!toggle) {
-            images[4].setAttribute('src', '/img/ElderEddington.jpeg');
+            images[3].setAttribute('src', '/img/ElderEddington.jpeg');
         }
-    } else if(element === images[5]) {
-        images[5].setAttribute('src', '/img/woodworking.jpeg');
+    } else if(this === images[4]) {
+        images[4].setAttribute('src', '/img/woodworking.jpeg');
         if (!toggle) {
-            images[5].setAttribute('src', '/img/ElderBunker.jpeg');
+            images[4].setAttribute('src', '/img/ElderBunker.jpeg');
         }
-    } else if(element === images[6]) {
-        images[6].setAttribute('src', '/img/origami.jpg');
+    } else if(this === images[5]) {
+        images[5].setAttribute('src', '/img/origami.jpg');
         if (!toggle) {
-            images[6].setAttribute('src', '/img/ElderPeterson.jpeg');
+            images[5].setAttribute('src', '/img/ElderPeterson.jpeg');
         }
-    } else if(element === images[7]) {
-        images[7].setAttribute('src', '/img/piano.jpg');
+    } else if(this === images[6]) {
+        images[6].setAttribute('src', '/img/piano.jpg');
         if (!toggle) {
-            images[7].setAttribute('src', '/img/ElderMontierth.jpeg');
+            images[6].setAttribute('src', '/img/ElderMontierth.jpeg');
         }
-    } else if(element === images[8]) {
-        images[8].setAttribute('src', '/img/crosscountry.jpg');
+    } else if(this === images[7]) {
+        images[7].setAttribute('src', '/img/crosscountry.jpg');
         if (!toggle) {
-            images[8].setAttribute('src', '/img/Elderjohnston.jpeg');
+            images[7].setAttribute('src', '/img/Elderjohnston.jpeg');
         }
-    } else if(element === images[9]) {
-        images[9].setAttribute('src', '/img/speaking.jpg');
+    } else if(this === images[8]) {
+        images[8].setAttribute('src', '/img/speaking.jpg');
         if (!toggle) {
-            images[9].setAttribute('src', '/img/ElderMorzelewski.jpeg');
+            images[8].setAttribute('src', '/img/ElderMorzelewski.jpeg');
         }
-    } else if(element === images[10]) {
-        images[10].setAttribute('src', '/img/pilot.jpg');
+    } else if(this === images[9]) {
+        images[9].setAttribute('src', '/img/pilot.jpg');
         if (!toggle) {
-            images[10].setAttribute('src', '/img/ElderRamsey.jpeg');
+            images[9].setAttribute('src', '/img/ElderRamsey.jpeg');
         }
     }
-});
+}
+
+images.forEach(function(element) {
+element.addEventListener('click', cardImages);
 });
 
 
