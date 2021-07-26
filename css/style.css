@@ -63,8 +63,8 @@ img {
   width: 45px;
   height: 45px;
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 3vw;
+  right: 3vw;
   fill: #1B2CC1;
   cursor: pointer;
   border-radius: 50%;
@@ -207,6 +207,11 @@ img {
     border: none;
     font-size: 2.2em;
   }
+}
+
+.menuFixed {
+  position: fixed;
+  width: 100%;
 }
 
 .header--menu li:nth-child(1)::before {

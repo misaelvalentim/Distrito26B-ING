@@ -3,8 +3,8 @@
     width: 45px;
     height: 45px;
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    bottom: 3vw;
+    right: 3vw;
     fill: #1B2CC1;
     cursor: pointer;
     border-radius: 50%;
@@ -101,6 +101,13 @@
         }
     }
 }
+// Fixed menu on Tablet
+
+.menuFixed {
+    position: fixed;
+    width: 100%;
+}
+
 // Underscore on MENU
 .header--menu {
     li:nth-child(1)::before {

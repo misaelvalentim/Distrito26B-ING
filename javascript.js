@@ -4,22 +4,30 @@ const arrow = document.querySelector('.up-arrow');
 
 function arrowUp() {
     window.location.href = "#"
-}
+};
 
 arrow.addEventListener('click', arrowUp);
 
-
 // Menu Hamburger
-
 const btnMenu = document.querySelector('.header--btn');
 
 function toggleMenu() {
     const HeaderNav = document.querySelector('.header--nav');
     HeaderNav.classList.toggle('active');
-
 }
 btnMenu.addEventListener('click', toggleMenu);
 
+// fixed Menu
+(function() {
+    const nav = document.querySelector('.header--nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 750 && window.innerWidth >= 600){
+            nav.classList.add('menuFixed');
+        } else {
+            nav.classList.remove('menuFixed');
+        }
+    })
+}) ();
 
 //Talents for all missionaries
 
