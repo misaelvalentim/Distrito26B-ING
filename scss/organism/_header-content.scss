@@ -1,0 +1,43 @@
+// Header-content setup
+
+.header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: darken($gray, 75%);
+    background-image: url(/img/distrito1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Background on header image
+.imgbackground::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 0px;
+    top: 40%;
+    left: 40%;
+    text-align: center;
+    font-size: 3.8em;
+    font-weight: 700;
+    color: #FFF;
+    z-index: 1;
+}
+
+.imgbackground:hover::before {
+    content: "Distrito 26A-ING";
+    height: 46px;
+}
+.imgbackground::after {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+}
+.imgbackground:hover::after {
+    background: #333a;
+}

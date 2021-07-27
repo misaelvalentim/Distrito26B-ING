@@ -31,7 +31,7 @@ img {
   font-weight: 600;
 }
 
-.text--h3, .cards h3 {
+.text--h3, .cards h3, #instructors h3 {
   font-size: 2.6em;
   font-family: 'Montserrat', sans-serif;
 }
@@ -41,20 +41,20 @@ img {
   font-family: 'Montserrat', sans-serif;
 }
 
-.text--body, .header--logo-box .logo-text, .header--menu li a, .cards address, .cards p {
+.text--body, .header--logo-box .logo-text, .header--menu li a, .cards address, .cards p, #instructors .irmaovalentim .valentim-text, #instructors .irmastefany .stefany-text, .footer {
   font-size: 1.4em;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 
 @media only screen and (min-width: 600px) {
-  .text--body, .header--logo-box .logo-text, .header--menu li a, .cards address, .cards p {
+  .text--body, .header--logo-box .logo-text, .header--menu li a, .cards address, .cards p, #instructors .irmaovalentim .valentim-text, #instructors .irmastefany .stefany-text, .footer {
     font-size: 1.8em;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .text--body, .header--logo-box .logo-text, .header--menu li a, .cards address, .cards p {
+  .text--body, .header--logo-box .logo-text, .header--menu li a, .cards address, .cards p, #instructors .irmaovalentim .valentim-text, #instructors .irmastefany .stefany-text, .footer {
     font-size: 1.8em;
   }
 }
@@ -68,46 +68,6 @@ img {
   fill: #1B2CC1;
   cursor: pointer;
   border-radius: 50%;
-}
-
-.header {
-  height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #1b1b1e;
-  background-image: url(/img/distrito.jpeg);
-  background-size: auto 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media only screen and (min-width: 600px) {
-  .header {
-    background-size: 550px 400px;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .header {
-    background-size: 850px 500px;
-  }
-}
-
-.header .header-img {
-  max-width: 200px;
-  min-height: 40%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .header--nav {
@@ -143,6 +103,9 @@ img {
   min-width: 100px;
   margin-left: 1em;
   font-weight: 700;
+  color: #1B2CC1;
+  -webkit-text-decoration: #1B2CC1;
+          text-decoration: #1B2CC1;
 }
 
 .header--logo {
@@ -207,6 +170,11 @@ img {
     border: none;
     font-size: 2.2em;
   }
+}
+
+a:visited {
+  -webkit-text-decoration: #1B2CC1;
+          text-decoration: #1B2CC1;
 }
 
 .menuFixed {
@@ -366,37 +334,6 @@ img {
   }
 }
 
-.imgbackground::before {
-  content: "";
-  position: absolute;
-  width: 20%;
-  height: 0px;
-  top: 40%;
-  left: 40%;
-  text-align: center;
-  font-size: 3.8em;
-  font-weight: 700;
-  color: #FFF;
-  z-index: 1;
-}
-
-.imgbackground:hover::before {
-  content: "Distrito 26A-ING";
-  height: 46px;
-}
-
-.imgbackground::after {
-  content: "";
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  bottom: 0;
-}
-
-.imgbackground:hover::after {
-  background: #333a;
-}
-
 .header--btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -465,16 +402,108 @@ img {
   }
 }
 
+#presentation {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #191c22;
+}
+
+#presentation .presentation--h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #d8dbe2;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+#presentation .video {
+  width: 300px;
+  height: 500px;
+  margin: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+  #presentation .video {
+    width: 580px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #presentation .video {
+    width: 880px;
+  }
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #191c22;
+  background-image: url(/img/distrito1.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgbackground::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 0px;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+  font-size: 3.8em;
+  font-weight: 700;
+  color: #FFF;
+  z-index: 1;
+}
+
+.imgbackground:hover::before {
+  content: "Distrito 26A-ING";
+  height: 46px;
+}
+
+.imgbackground::after {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+}
+
+.imgbackground:hover::after {
+  background: #333a;
+}
+
 .section--1 {
   display: -ms-grid;
   display: grid;
   grid-auto-rows: auto;
-  gap: 30px;
-  background: #FFFFFF;
+  gap: 100px;
+  background: #d8dbe2;
 }
 
 .section--1 .title {
-  color: #1B2CC1;
+  color: #191c22;
   text-align: center;
   margin-top: 50px;
 }
@@ -515,24 +544,25 @@ img {
 
 @media only screen and (min-width: 600px) {
   .cards img {
-    height: 400px;
-    min-height: 200px;
+    height: 700px;
   }
 }
 
 .cards .talent {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 400px;
+  width: 400px;
+  height: 700px;
   opacity: .5;
   -webkit-transition: opacity 3s;
   transition: opacity 3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media only screen and (min-width: 900px) {
   .cards .talent {
-    width: 300px;
+    width: 500px;
   }
 }
 
@@ -548,7 +578,7 @@ img {
 .cards h3 {
   max-width: 400px;
   margin: .5em auto;
-  color: #727d96;
+  color: #1B2CC1;
 }
 
 .section--1.section--1__animation img {
@@ -576,9 +606,39 @@ img {
   }
 }
 
-#presentation {
+#instructors {
+  width: 100%;
+  background: #d8dbe2;
+  padding-top: 100px;
+}
+
+#instructors img {
   max-width: 100%;
-  height: 100vh;
+}
+
+@media only screen and (min-width: 600px) {
+  #instructors img {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #instructors img {
+    max-width: 100%;
+  }
+}
+
+#instructors h3 {
+  margin: 30px auto;
+  text-align: center;
+  color: #1B2CC1;
+  font-weight: 700;
+}
+
+#instructors .irmaovalentim {
+  width: 90%;
+  text-align: center;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -589,32 +649,101 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: black;
-}
-
-#presentation .presentation--h2 {
-  font-weight: 700;
-  color: #d8dbe2;
-  margin-top: 30px;
-}
-
-#presentation .video {
-  width: 320px;
-  height: 500px;
-  margin: 30px;
-}
-
-@media only screen and (min-width: 600px) {
-  #presentation .video {
-    width: 600px;
-  }
+  -webkit-box-shadow: 5px 5px 5px 5px #1b2cc159;
+          box-shadow: 5px 5px 5px 5px #1b2cc159;
 }
 
 @media only screen and (min-width: 900px) {
-  #presentation .video {
-    width: 900px;
+  #instructors .irmaovalentim {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
+}
+
+#instructors .irmaovalentim .valentim-image {
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+  #instructors .irmaovalentim .valentim-image {
+    width: 50%;
+  }
+}
+
+#instructors .irmaovalentim .valentim-text {
+  text-align: center;
+  line-height: 2.1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#instructors .irmastefany {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 5px 5px 5px 5px #1b2cc159;
+          box-shadow: 5px 5px 5px 5px #1b2cc159;
+}
+
+@media only screen and (min-width: 900px) {
+  #instructors .irmastefany {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+#instructors .irmastefany .stefany-image {
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+  #instructors .irmastefany .stefany-image {
+    width: 50%;
+  }
+}
+
+#instructors .irmastefany .stefany-text {
+  text-align: center;
+  line-height: 2.1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer {
+  font-size: 3em;
+  height: 10vh;
+  background: #191c22;
+  text-align: center;
+  color: #d8dbe2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

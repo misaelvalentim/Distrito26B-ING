@@ -1,0 +1,11 @@
+.footer {
+    @extend .text--body;
+    font-size: 3em;
+    height: 10vh;
+    background: darken($gray, 75%);
+    text-align: center;
+    color: $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

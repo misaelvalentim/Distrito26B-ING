@@ -11,27 +11,6 @@
 }
 //menu setup
 .header {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background: $dark;
-    background-image: url(/img/distrito.jpeg);
-    background-size: auto 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    @include tablet {
-        background-size: 550px 400px;
-    }
-    @include desktop {
-        background-size: 850px 500px;
-    }
-    .header-img { 
-        max-width: 200px;
-        min-height: 40%;
-        align-self: center;
-        flex-grow: 1;
-    }
     &--nav {
         box-sizing: border-box;
         display: flex;
@@ -51,6 +30,8 @@
             min-width: 100px;
             margin-left: 1em;
             font-weight: 700;
+            color: #1B2CC1;
+            text-decoration: #1B2CC1;
         }
     }
     &--logo {
@@ -101,6 +82,12 @@
         }
     }
 }
+
+//Links setup 
+a:visited{
+    text-decoration: #1B2CC1;
+}
+
 // Fixed menu on Tablet
 
 .menuFixed {
@@ -219,35 +206,6 @@
         }
     }
 }
-// Background on header image
-.imgbackground::before {
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 0px;
-    top: 40%;
-    left: 40%;
-    text-align: center;
-    font-size: 3.8em;
-    font-weight: 700;
-    color: #FFF;
-    z-index: 1;
-}
-
-.imgbackground:hover::before {
-    content: "Distrito 26A-ING";
-    height: 46px;
-}
-.imgbackground::after {
-    content: "";
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    bottom: 0;
-}
-.imgbackground:hover::after {
-    background: #333a;
-}
 //button setup
 .header--btn {
     display: flex;
@@ -281,7 +239,7 @@
     }
 }
 
-//hamburger setup
+// funcional hamburger 
 .header--nav.active .header--btn__hamburger {
     border: transparent;
     position: relative;

@@ -1,0 +1,72 @@
+#instructors {
+    width: 100%;
+    background: $gray;
+    padding-top: 100px;
+    img {
+        max-width: 100%;
+        @include tablet {
+            max-width: 90%;
+        }
+        @include desktop {
+            max-width: 100%;
+            
+        }
+    }
+    h3 {
+        @extend .text--h3;
+        margin: 30px auto;
+        text-align: center;
+        color: #1B2CC1;
+        font-weight: 700;
+    }
+    .irmaovalentim {
+        width: 90%;
+        text-align: center;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 5px 5px 5px 5px #1b2cc159;
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .valentim-image {
+            width: 100%;
+            @include desktop {
+                width: 50%;
+            }
+        }
+        .valentim-text {
+            @extend .text--body;
+            text-align: center;
+            line-height: 2.1em;
+            align-self: center;
+        }
+    }
+    .irmastefany {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 5px 5px 5px 5px #1b2cc159;
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .stefany-image {
+            width: 100%;
+            @include desktop {
+                width: 50%;
+            }
+        }
+        .stefany-text {
+            @extend .text--body;
+            text-align: center;
+            line-height: 2.1em;
+            align-self: center;
+        }
+    }
+}
