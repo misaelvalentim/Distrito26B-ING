@@ -25,7 +25,7 @@ img {
   }
 }
 
-.text--h2, #presentation .presentation--h2 {
+.text--h2, #presentation .presentation--h2, #instructors .instructors--title {
   font-size: 3.2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -613,6 +613,9 @@ a:visited {
 }
 
 #instructors img {
+  opacity: 1;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
   max-width: 100%;
 }
 
@@ -626,6 +629,12 @@ a:visited {
   #instructors img {
     max-width: 100%;
   }
+}
+
+#instructors .instructors--title {
+  font-weight: 700;
+  text-align: center;
+  color: #191c22;
 }
 
 #instructors h3 {
@@ -729,6 +738,23 @@ a:visited {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+#instructors .talent {
+  min-width: 100%;
+  opacity: .5;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media only screen and (min-width: 900px) {
+  #instructors .talent {
+    width: 500px;
+  }
 }
 
 .footer {

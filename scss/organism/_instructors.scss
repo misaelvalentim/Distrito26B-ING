@@ -3,6 +3,8 @@
     background: $gray;
     padding-top: 100px;
     img {
+        opacity: 1;
+        transition: opacity 2s;
         max-width: 100%;
         @include tablet {
             max-width: 90%;
@@ -11,6 +13,12 @@
             max-width: 100%;
             
         }
+    }
+    .instructors--title {
+        @extend .text--h2;
+        font-weight: 700;
+        text-align: center;
+        color: darken($gray, 75%);
     }
     h3 {
         @extend .text--h3;
@@ -67,6 +75,18 @@
             text-align: center;
             line-height: 2.1em;
             align-self: center;
+        }
+    }
+}
+#instructors {
+    .talent {
+        min-width: 100%;
+        opacity: .5;
+        transition: opacity 3s;
+        object-fit: cover;
+        object-position: center;
+        @include desktop {
+            width: 500px;
         }
     }
 }

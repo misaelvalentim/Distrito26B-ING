@@ -94,6 +94,31 @@ element.addEventListener('click', cardImages);
 });
 
 
+//Talents for the instructors
+
+
+const instructorsImages = document.querySelectorAll('#instructors img');
+
+function getInstructorsImages() {
+    const toggle = this.classList.toggle('talent');
+    if(this === instructorsImages[0]) {
+        instructorsImages[0].setAttribute('src', '/img/programmer.jpg');
+        if (!toggle) {
+            instructorsImages[0].setAttribute('src', '/img/irmaovalentim.jpeg');
+        }
+    } else if(this === instructorsImages[1]) {
+        instructorsImages[1].setAttribute('src', '/img/videography.png');
+        if (!toggle) {
+            instructorsImages[1].setAttribute('src', '/img/irmastefany.jpeg');
+        }
+    }
+}
+
+instructorsImages.forEach(function(element) {
+element.addEventListener('click', getInstructorsImages);
+});
+
+
 // Animation of First Section
 
 (function() {
